@@ -4,25 +4,26 @@ php-user-managment-class
 One class to control registration, logging in and authorization
 
 Register file example :
-####
-<?php
-include 'user.class.php';
 
-if (!empty($_POST)){
-	$user = new user();
-	$user->register();
-	if($user->error("register") == ""){
-		echo "win";
-	}else{
-		echo $user->error("register");
-	}
-}
-echo "<form name='testform' method='post'>
-<input type='text' name='username'>
-<input type='text' name ='password'>
-<input type='text' name ='age'>
-<input type='submit'>
-</form>";
+    <?php
+    include 'user.class.php';
+    
+    if (!empty($_POST)){
+    	$user = new user();
+    	$user->register();
+    	if($user->error("register") == ""){
+    		echo "win";
+    	}else{
+    		echo $user->error("register");
+    	}
+    }
+    echo "<form name='testform' method='post'>
+    <input type='text' name='username'>
+    <input type='text' name ='password'>
+    <input type='text' name ='age'>
+    <input type='submit'>
+    </form>";
+    ?>
 
 Login file example :
 
