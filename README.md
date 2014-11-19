@@ -4,7 +4,7 @@ php-user-managment-class
 One class to control registration, logging in and authorization
 
 Register file example :
-
+####
 <?php
 include 'user.class.php';
 
@@ -52,3 +52,4 @@ if($user->error("auth") == ""){
 	<input type='submit'>
 	</form>";
 }
+####
