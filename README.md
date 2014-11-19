@@ -57,7 +57,8 @@ Login file example :
 	}
 Forms configuration file documentation
 ---
-@all available options :
+
+All available options :
 	/req - required for class
 	/opt - optional
 
