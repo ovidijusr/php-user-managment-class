@@ -27,30 +27,30 @@ Register file example :
 
 Login file example :
 
-require_once 'user.class.php';
-$user = new user();
-
-if($_GET["logout"] != ""){
-	$user->logout();
-}
-
-if (!empty($_POST)) {
-	$user->login($_POST["username"],$_POST["password"]);
-	if ($user->error("login") != "") {
-		echo $user->error("login");
+	require_once 'user.class.php';
+	$user = new user();
+	
+	if($_GET["logout"] != ""){
+		$user->logout();
 	}
-}
-
-$user->auth();
-
-if($user->error("auth") == ""){
-	echo "logged in as ";
-	echo $user->username;
-}else{
-	echo "<form name='testform' method='post'>
-	<input type='text' name='username' placeholder='username'>
-	<input type='text' name ='password' placeholder='password'>
-	<input type='submit'>
-	</form>";
-}
+	
+	if (!empty($_POST)) {
+		$user->login($_POST["username"],$_POST["password"]);
+		if ($user->error("login") != "") {
+			echo $user->error("login");
+		}
+	}
+	
+	$user->auth();
+	
+	if($user->error("auth") == ""){
+		echo "logged in as ";
+		echo $user->username;
+	}else{
+		echo "<form name='testform' method='post'>
+		<input type='text' name='username' placeholder='username'>
+		<input type='text' name ='password' placeholder='password'>
+		<input type='submit'>
+		</form>";
+	}
 ####
