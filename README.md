@@ -4,6 +4,7 @@ php-user-managment-class
 One class to control registration, logging in and authorization
 
 Register file example :
+========================
 
     <?php
     include 'user.class.php';
@@ -26,6 +27,7 @@ Register file example :
     ?>
 
 Login file example :
+========================
 
 	require_once 'user.class.php';
 	$user = new user();
