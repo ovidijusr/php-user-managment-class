@@ -27,7 +27,7 @@ Register file example :
     ?>
 
 Login file example :
-=
+===
 
 	require_once 'user.class.php';
 	$user = new user();
